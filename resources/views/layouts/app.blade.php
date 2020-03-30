@@ -73,9 +73,7 @@
                         @else
                             <li>
                                 <input type="text" name="search" class="form-control" placeholder="search medicine"  id="search" onkeyup = "showHint(this.value)">
-                                <div id="txtHint">
-                                    <!--dfghjk-->
-                                </div>
+                               
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -103,8 +101,18 @@
             @yield('content')
         </main>
     </div>
+     <div id="txtHint">
+                                    <!--dfghjk-->
+     </div>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

@@ -18,6 +18,9 @@ Route::get('/fetch', function () {
     return view('fetch');
 });
 
+Route::get('/doc', function () {
+    return view('doc');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -30,7 +33,7 @@ Route::post('/store_submit','store@submit_store');
 Route::post('/med','med@submit_med');
 Route::get('/live_search','search@search');
 Route::get('/fetch','LiveSearch@fun1');
-
+Route::get('/doc1','consult@fun1');
 
 
 

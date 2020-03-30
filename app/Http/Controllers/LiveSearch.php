@@ -10,7 +10,7 @@ class LiveSearch extends Controller
     {
     	$name = $request->input('search');
     	$phone = '%'.$name.'%';
-		$seachbyphone = DB::select('SELECT name FROM med WHERE name LIKE ?',[$phone]);
+		$seachbyphone = DB::select('SELECT * FROM med WHERE name LIKE ?',[$phone]);
 		 //return $seachbyphone;
 		//print_r($seachbyphone);
 		return view('fetch', ['seachbyphone' => $seachbyphone]);

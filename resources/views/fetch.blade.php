@@ -1,5 +1,14 @@
-@foreach($seachbyphone as  $data)  
-      <a href="#">{{$data->name}}</a> <br>            
+@foreach($seachbyphone as  $data) 
+	<ul>
+	<li>
+		<p>{{$data->name}}</p>
+		<p>Price-:{{$data->price}}RS</p>
+		<h6>
+		<a href="#"><b>Order Now</b></a>
+	</h6>
+	</li>	
+	</ul> 
+                 
 @endforeach
 <?php
 
