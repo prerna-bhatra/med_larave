@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/fetch', function () {
+    return view('fetch');
+});
 
 Auth::routes();
 
