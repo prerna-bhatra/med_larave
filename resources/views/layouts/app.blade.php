@@ -18,6 +18,28 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+         function showHint(str) {
+            //alert("yufudsv");
+           if (str.length == 0) {
+               document.getElementById("txtHint").innerHTML = "";
+               return;
+            }else {
+               var xmlhttp = new XMLHttpRequest();
+                    
+               xmlhttp.onreadystatechange = function() {
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                     document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+                  }
+               }
+               xmlhttp.open("GET", "fetch?q=" + str, true);
+               xmlhttp.send();
+            }
+         }
+      </script>
+
 </head>
 <body>
     <div id="app">
@@ -50,7 +72,10 @@
                             @endif
                         @else
                             <li>
-                                <input type="text" name="search" class="form-control" placeholder="search medicine">
+                                <input type="text" name="search" class="form-control" placeholder="search medicine"  id="search" onkeyup = "showHint(this.value)">
+                                <div id="txtHint">
+                                    <!--dfghjk-->
+                                </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

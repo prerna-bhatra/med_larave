@@ -25,3 +25,11 @@ Route::view('/store', 'admin.store');
 Route::view('/medicine', 'admin.med');
 Route::post('/store_submit','store@submit_store');
 Route::post('/med','med@submit_med');
+Route::get('/live_search','search@search');
+Route::get('/fetch','LiveSearch@fun1');
+
+
+
+
+
+
